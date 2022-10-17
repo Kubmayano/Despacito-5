@@ -21,8 +21,10 @@ module.exports = {
             let helpFile = require(`../commands/${args[0]}.js`)
             const prefix = require("../config.json").prefix
 
-             message.channel.send(`**${prefix}${args[0]} info**\nOperators only \`${helpFile.meta.operatorOnly}\`\nDescription \`${helpFile.meta.description}\`\nAliases \`${helpFile.meta.alias.join(", ")}\``)
+            message.channel.send(`**${prefix}${args[0]} info**\nOperators only \`${helpFile.meta.operatorOnly}\`\nDescription \`${helpFile.meta.description}\`\nAliases \`${helpFile.meta.alias}\``)
         } catch(err) {
+            console.log(`fucky wucky error log mommy dommy`)
+            console.log(err)
             message.channel.send("This went mega fucky wucky, are you *really* sure that is a real command?")
             return
         }
