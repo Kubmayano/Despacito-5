@@ -2,7 +2,7 @@ module.exports = {
     meta: {
         operatorOnly: true,
         serverOnly: false,
-        description: "Echoes your args",
+        description: "Echoes your input",
         alias: null
     },
 

@@ -4,7 +4,7 @@ module.exports = {
     meta: {
         operatorOnly: true,
         serverOnly: false,
-        description: "8ball command",
+        description: "8ball that gives you a random answer",
         alias: null
     },
 

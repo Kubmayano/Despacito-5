@@ -5,7 +5,7 @@ module.exports = {
     meta: {
         operatorOnly: true,
         serverOnly: false,
-        description: "Geoguessr cheat command",
+        description: "Geoguessr cheat that takes your game token as input",
         alias: null
     },
 

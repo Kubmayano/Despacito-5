@@ -5,7 +5,7 @@ module.exports = {
     meta: {
         operatorOnly: true,
         serverOnly: false,
-        description: "Doxxes a person of your choice ;)",
+        description: "Doxxes a person of your choice",
         alias: null,
     },
 

@@ -2,7 +2,7 @@ module.exports = {
     meta: {
         operatorOnly: false,
         serverOnly: false,
-        description: "Rolls a dice",
+        description: "Rolls a dice with the specified number of sides",
         alias: ["roll", "d"]
     },
 

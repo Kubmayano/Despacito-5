@@ -7,10 +7,14 @@ module.exports = {
         alias: null
     },
 
-    execute (client, message, args) {
+    async execute (client, message, args) {
+
+        const fs = require("fs");
+
         if (args[0] == undefined || args[0] == "") {
-            message.channel.send(`Specify a command to show detailed usage instructions`)
-            return
+            const commands = await fs.readdirSync('./commands/').filter(file => file.endsWith('.js'));
+            message.channel.send(`**Bot commands:**\n\`\`\`${commands.join(", ").split(".js").join("")}\`\`\``)
+            return;
         }
 
         try {

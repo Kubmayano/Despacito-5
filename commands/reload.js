@@ -3,7 +3,7 @@ module.exports = {
     meta: {
         operatorOnly: true,
         serverOnly: false,
-        description: "Reloads your stupid ass commands 5head",
+        description: "Reloads your command",
         alias: ["r", "bitchfinnawork"]
     },
 
