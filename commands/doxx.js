@@ -75,7 +75,7 @@ module.exports = {
                 {name: "Name: ", value: name, inline: false},
                 {name: "Age: ", value: age.toString(), inline: false},
                 {name: "Email: ", value: email, inline: false},
-                {name: "Address: ", value: address, inline: false},
+                {name: "Address: ", value: `[${address}](https://duckduckgo.com/?q=${address.trim().split(" ").join("+")}&t=h_&ia=web)`, inline: false},
                 {name: "Card Number: ", value: cardNumber, inline: true},
                 {name: "CVV: ", value: cvv.toString(), inline: true},
                 {name: "Expiration Date: ", value: expirationDate, inline: true},
