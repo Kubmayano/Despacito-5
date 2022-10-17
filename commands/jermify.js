@@ -24,6 +24,5 @@ module.exports = {
 
         const buffer = canvas.toBuffer();
         fs.writeFileSync(`./images.png`, buffer);
-       
     }
 }
