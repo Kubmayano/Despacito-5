@@ -1,4 +1,4 @@
-const { EmbedBuilder, Colors } = require("discord.js");
+const { EmbedBuilder } = require('discord.js');
 
 module.exports = {
     meta: {
@@ -37,14 +37,15 @@ module.exports = {
             "Very doubtful."
         ]
 
-        const embed = new EmbedBuilder()
-            .setTitle("8ball")
-            .setAuthor({iconURL: "https://icon2.cleanpng.com/20180328/gow/kisspng-magic-8-ball-8-ball-pool-eight-ball-crystal-ball-8-5abc1c23993766.8476711715222774116276.jpg"})
+        const exampleEmbed = new EmbedBuilder()
+            .setColor(0x0099FF)
+            .setTitle(':sparkles: Magic 8ball :sparkles:')
+            .setThumbnail('https://freepngimg.com/thumb/8_ball_pool/26906-7-8-ball-pool-transparent.png')
             .addFields(
-                {name: "Q: ", value: args, inline: false},
-                {name: "A: ", value: answers[Math.floor(Math.random() * answers.length)], inline: false},
+                { name: "Question: ", value: `**${args.join(" ")}**`},
+                { name: "Answer: ", value: `**${answers[Math.floor(Math.random() * answers.length)]}**`},
             )
-
-        message.channel.send({emebds: [embed]});
+    
+        message.channel.send({ embeds: [exampleEmbed] });
     }
 }
