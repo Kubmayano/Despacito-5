@@ -11,5 +11,6 @@ module.exports = {
         const fs = require("fs")
         const sauce = fs.readFileSync("./commands/sauce.js", "utf-8")
         message.channel.send(`\`\`\`js\n${sauce.toString()} \`\`\``)
+
     }
 }

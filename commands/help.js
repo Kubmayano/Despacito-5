@@ -4,7 +4,7 @@ module.exports = {
         operatorOnly: false,
         serverOnly: false,
         description: "Displays help about commands",
-        alias: null
+        alias: ["commands", "command"]
     },
 
     async execute (client, message, args) {
