@@ -1,3 +1,6 @@
+const { discordSort } = require('discord.js')
+const { disconnect } = require('process')
+
 module.exports = {
 
     meta: {
@@ -11,16 +14,16 @@ module.exports = {
         
         const { createCanvas, loadImage } = require('canvas')
         const fs = require('fs')
-        const canvas = createCanvas(200, 200)
+        const canvas = createCanvas(1920, 1080)
         const ctx = canvas.getContext('2d')
 
-        const pfp = await loadImage(message.author.displayAvatarURL())
+        ctx.fillStyle = "#fff"
+
+        const pfp = await loadImage("https://media.discordapp.net/attachments/457464958976917504/1031597620944175205/hEAD.png?width=442&height=676")
         ctx.drawImage(pfp, 0, 0, 200, 200)
 
-        const buffer = canvas.toBuffer("image/png")
-        fs.writeFileSync(`./Files/Images/${message.author.id}.png`, buffer)
-        
-
-        
+        const buffer = canvas.toBuffer();
+        fs.writeFileSync(`./images.png`, buffer);
+       
     }
 }
